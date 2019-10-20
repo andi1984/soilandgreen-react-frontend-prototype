@@ -3,12 +3,11 @@ import { withRouter } from "react-router-dom";
 import TopBar from "../Layout/TopBar.js";
 import List from "../List";
 
-
 import { gardenTypes } from "../../helper/api";
 import { saveType } from "../../helper/localStorage";
 import routes from "../../routes";
 
-const TypeSelectionPage = ({history}) => {
+const TypeSelectionPage = ({ history }) => {
   const [types, setTypes] = useState([]);
   useEffect(() => {
     gardenTypes().then(types => {
@@ -16,14 +15,10 @@ const TypeSelectionPage = ({history}) => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log("types are", types);
-  }, [types]);
-
   const onListSelect = item => {
     // Save localstorage
     saveType(JSON.stringify(item));
-    
+
     // Redirect to plants
     history.push(routes.crops);
   };

@@ -17,7 +17,8 @@ export const generate = crops => {
 
       const groupsForCropPeriod = periodsForSelectedGardenType.map(period => ({
         id: groupId(crop, period),
-        title: `${crop.name} - ${getGermanTranslations[period.workflow]}`
+        title: `${crop.name} - ${getGermanTranslations[period.workflow]}`,
+        image: "image" in crop ? crop.image : undefined
       }));
 
       const itemsForCropPeriod = periodsForSelectedGardenType.map(period => {

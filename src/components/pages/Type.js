@@ -5,6 +5,8 @@ import List from "../List";
 
 import { gardenTypes } from "../../helper/api";
 import { saveType } from "../../helper/localStorage";
+import { getIconForType } from "../../helper/type";
+import { getGermanTranslations } from "../../helper/l10n";
 import routes from "../../routes";
 
 const TypeSelectionPage = ({ history }) => {
@@ -29,7 +31,10 @@ const TypeSelectionPage = ({ history }) => {
       <h1>Wo möchtest du etwas anpflanzen?</h1>
       <List
         items={types.map(type =>
-          Object.assign({}, type, { text: { primary: type.label } })
+          Object.assign({}, type, {
+            text: { primary: getGermanTranslations[type.id] },
+            image: getIconForType(type)
+          })
         )}
         onSelect={e => {
           onListSelect(e);

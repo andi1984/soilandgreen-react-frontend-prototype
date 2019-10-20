@@ -16,16 +16,18 @@ const workflowLabels = {
   harvest: "Ernte"
 };
 
+const groupId = (crop, period) => `${crop.id} - ${period.id}`;
 const PlanPage = ({ history }) => {
   const [groups, setGroups] = useState([]);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     const selectedCrops = getSelected(readCrops());
+    let allGroups = [];
+    let allItems = [];
     selectedCrops.forEach(crop => {
       if ("periods" in crop) {
         const selectedGardenType = readType();
-        console.log("selected type", selectedGardenType);
 
         const periodsForSelectedGardenType = crop.periods.filter(
           period => period.location === selectedGardenType.id
@@ -33,24 +35,25 @@ const PlanPage = ({ history }) => {
 
         const groupsForCropPeriod = periodsForSelectedGardenType.map(
           period => ({
-            id: period.id,
+            id: groupId(crop, period),
             title: `${crop.name} - ${workflowLabels[period.workflow]}`
           })
         );
 
         const itemsForCropPeriod = periodsForSelectedGardenType.map(period => {
           return {
-            group: period.id,
+            group: groupId(crop, period),
             title: workflowLabels[period.workflow],
             id: Math.random(),
             start_time: moment(period.begin),
             end_time: moment(period.end)
           };
         });
-
-        setGroups(groups.concat(groupsForCropPeriod));
-        setItems(items.concat(itemsForCropPeriod));
+        allGroups = allGroups.concat(groupsForCropPeriod);
+        allItems = allItems.concat(itemsForCropPeriod);
       }
+      setGroups(allGroups);
+      setItems(allItems);
     });
   }, []);
 

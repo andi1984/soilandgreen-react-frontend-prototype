@@ -10,6 +10,7 @@ import "react-calendar-timeline/lib/Timeline.css";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
 
+import Wrapper from '../Layout/Wrapper';
 import TopBar from "../Layout/TopBar.js";
 import { readCrops } from "../../helper/localStorage";
 import { getSelected } from "../../helper/array";
@@ -42,7 +43,7 @@ const PlanPage = ({ history }) => {
   }, []);
 
   return (
-    <div>
+    <Wrapper>
       <TopBar title="Dein Gartenplan" />
       <h1>Gartenplan</h1>
       <Timeline
@@ -65,7 +66,7 @@ const PlanPage = ({ history }) => {
           );
         }}
       />
-    </div>
+    </Wrapper>
   );
 };
 

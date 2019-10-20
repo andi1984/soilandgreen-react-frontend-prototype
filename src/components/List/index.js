@@ -5,6 +5,8 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
 
 const MainList = ({ items, loading, onSelect, withCheckbox }) => {
   return (
@@ -29,6 +31,11 @@ const MainList = ({ items, loading, onSelect, withCheckbox }) => {
                   onChange={e => onSelect(e.target.checked, item)}
                 />
               </ListItemIcon>
+            )}
+            {item.image && (
+              <ListItemAvatar>
+                <Avatar alt={item.text.primary} src={item.image} />
+              </ListItemAvatar>
             )}
             <ListItemText id={id} primary={item.text.primary} />
           </ListItem>

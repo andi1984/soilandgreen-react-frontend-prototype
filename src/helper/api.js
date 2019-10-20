@@ -1,10 +1,6 @@
+import { GARDEN_TYPES } from "./type";
 // TODO: Move to env
 const ENDPOINT = "https://soilandgreen.org";
-
-const GARDEN_TYPES = [
-  { id: "garden", label: "Garden" },
-  { id: "glasshouse", label: "Glass House" }
-];
 
 export const cropJson = () => {
   return fetch(`${ENDPOINT}/api/crop`, {

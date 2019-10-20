@@ -1,0 +1,8 @@
+{
+  "name": "soil-and-green",
+  "version": 2,
+  "regions": ["bru"],
+  "github": {
+    "enabled": true
+  }
+}

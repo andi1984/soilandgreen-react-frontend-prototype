@@ -23,14 +23,14 @@ const TopBar = ({ title }) => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton
+        {/* <IconButton
           edge="start"
           className={classes.menuButton}
           color="inherit"
           aria-label="menu"
         >
           <MenuIcon />
-        </IconButton>
+        </IconButton> */}
         <Typography variant="h6" className={classes.title}>
           {title}
         </Typography>

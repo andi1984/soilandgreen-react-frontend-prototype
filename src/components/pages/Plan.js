@@ -5,12 +5,16 @@ import Timeline from "react-calendar-timeline";
 // make sure you include the timeline stylesheet or the timeline will not be styled
 import "react-calendar-timeline/lib/Timeline.css";
 import TopBar from "../Layout/TopBar.js";
-import List from "../List";
 
-import { gardenTypes } from "../../helper/api";
 import { readCrops, readType } from "../../helper/localStorage";
 import { getSelected } from "../../helper/array";
-import routes from "../../routes";
+
+import "../../timeline.css";
+
+const workflowLabels = {
+  sow: "Saat",
+  harvest: "Ernte"
+};
 
 const PlanPage = ({ history }) => {
   const [groups, setGroups] = useState([]);
@@ -30,14 +34,14 @@ const PlanPage = ({ history }) => {
         const groupsForCropPeriod = periodsForSelectedGardenType.map(
           period => ({
             id: period.id,
-            title: `${crop.name} - ${period.workflow}`
+            title: `${crop.name} - ${workflowLabels[period.workflow]}`
           })
         );
 
         const itemsForCropPeriod = periodsForSelectedGardenType.map(period => {
           return {
             group: period.id,
-            title: period.workflow,
+            title: workflowLabels[period.workflow],
             id: Math.random(),
             start_time: moment(period.begin),
             end_time: moment(period.end)
@@ -59,8 +63,8 @@ const PlanPage = ({ history }) => {
   }, [items]);
   return (
     <div>
-      <TopBar title="Your garden plan" />
-      <h1>Plan</h1>
+      <TopBar title="Dein Gartenplan" />
+      <h1>Gartenplan</h1>
       <Timeline
         canMove={false}
         dragging={false}

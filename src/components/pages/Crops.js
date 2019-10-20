@@ -33,8 +33,8 @@ const CropSelectionPage = ({ history }) => {
 
   return (
     <div>
-      <TopBar title="Plants" />
-      <h1>Select the plants you're interested in</h1>
+      <TopBar title="Saatgut" />
+      <h1>Welches Saatgut möchtest du pflanzen?</h1>
       <List
         withCheckbox={true}
         items={crops.map(type =>

@@ -30,8 +30,8 @@ const TypeSelectionPage = ({history}) => {
 
   return (
     <div>
-      <TopBar title="Garden Type" />
-      <h1>Select type</h1>
+      <TopBar title="Gartenart" />
+      <h1>Wo möchtest du etwas anpflanzen?</h1>
       <List
         items={types.map(type =>
           Object.assign({}, type, { text: { primary: type.label } })

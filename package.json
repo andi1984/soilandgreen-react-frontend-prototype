@@ -7,8 +7,12 @@
     "@bit/mui-org.material-ui.list-item": "^3.9.2",
     "@bit/mui-org.material-ui.list-item-avatar": "^3.9.2",
     "@bit/mui-org.material-ui.list-item-text": "^3.9.2",
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^4.5.1",
     "react": "^16.10.2",
+    "react-calendar-timeline": "^0.26.5",
     "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.0"
   },

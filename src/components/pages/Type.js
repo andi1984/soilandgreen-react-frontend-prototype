@@ -22,7 +22,8 @@ const TypeSelectionPage = ({history}) => {
 
   const onListSelect = item => {
     // Save localstorage
-    saveType(item);
+    saveType(JSON.stringify(item));
+    
     // Redirect to plants
     history.push(routes.crops);
   };

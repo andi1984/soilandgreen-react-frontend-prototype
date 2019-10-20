@@ -11,11 +11,7 @@ import { setSelected, getSelected } from "../../helper/array";
 import routes from "../../routes";
 
 const CropSelectionPage = ({ history }) => {
-  const [crops, setCrops] = useState([
-    { name: "test", id: 1 },
-    { name: "a", id: 2 },
-    { name: "b", id: 3 }
-  ]);
+  const [crops, setCrops] = useState([]);
   useEffect(() => {
     cropJson()
       .then(res => res.json())

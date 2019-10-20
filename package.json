@@ -1,6 +1,6 @@
 {
   "name": "soilandgreen-react-frontend-prototype",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@bit/mui-org.material-ui.list": "^3.9.2",

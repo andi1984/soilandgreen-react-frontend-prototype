@@ -4,5 +4,6 @@
   "regions": ["bru"],
   "github": {
     "enabled": true
-  }
+  },
+  "alias": "app.soilandgreen.org"
 }

@@ -7,7 +7,7 @@ import List from "../List";
 
 import { cropJson } from "../../helper/api";
 import { saveCrops } from "../../helper/localStorage";
-import { setSelected, getSelected } from "../../helper/array";
+import { setSelected, hasSelected } from "../../helper/array";
 import routes from "../../routes";
 
 const CropSelectionPage = ({ history }) => {
@@ -48,7 +48,7 @@ const CropSelectionPage = ({ history }) => {
       />
       <Button
         color="primary"
-        disabled={!getSelected(crops)}
+        disabled={!hasSelected(crops)}
         onClick={() => {
           history.push(routes.plan);
         }}

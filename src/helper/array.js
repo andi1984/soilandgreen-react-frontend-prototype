@@ -13,5 +13,9 @@ export const setSelected = (array, selectedId, isSelected) => {
 };
 
 export const getSelected = array => {
-  return array.find(entry => entry.selected);
+  return array.filter(entry => !!entry.selected);
+};
+
+export const hasSelected = array => {
+  return array.some(entry => !!entry.selected);
 };

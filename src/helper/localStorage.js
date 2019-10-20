@@ -1,6 +1,6 @@
 /**
  * Save selected garden type in local storage.
- * @param {Object} type 
+ * @param {Object} type
  */
 export const saveType = type => {
   localStorage.setItem("type", type);
@@ -11,12 +11,12 @@ export const saveType = type => {
  * @return {Object}
  */
 export const readType = () => {
-  localStorage.getItem("type");
+  return JSON.parse(localStorage.getItem("type"));
 };
 
 /**
  * Save selected crops in local storage.
- * @param {array} crops 
+ * @param {array} crops
  */
 export const saveCrops = crops => {
   localStorage.setItem("crops", crops);
@@ -26,5 +26,5 @@ export const saveCrops = crops => {
  * @return {array
  */
 export const readCrops = () => {
-  localStorage.getItem("crops");
+  return JSON.parse(localStorage.getItem("crops"));
 };

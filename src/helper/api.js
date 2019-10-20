@@ -3,8 +3,7 @@ const ENDPOINT = "https://soilandgreen.org";
 
 const GARDEN_TYPES = [
   { id: "garden", label: "Garden" },
-  { id: "balcony", label: "Balcony" },
-  { id: "interior", label: "Interior" }
+  { id: "glasshouse", label: "Glass House" }
 ];
 
 export const cropJson = () => {

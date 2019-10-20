@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Type from "./components/pages/Type";
 import Crops from "./components/pages/Crops";
+import Plan from "./components/pages/Plan";
 
 import routes from "./routes";
 
@@ -20,7 +21,7 @@ function App() {
           <Crops />
         </Route>
         <Route path={routes.plan}>
-          <h1>TODO: Plan</h1>
+          <Plan />
         </Route>
       </Switch>
     </Router>

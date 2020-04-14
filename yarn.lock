@@ -10070,10 +10070,10 @@ react-app-polyfill@^1.0.4:
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
 
-react-calendar-timeline@^0.26.5:
-  version "0.26.5"
-  resolved "https://registry.yarnpkg.com/react-calendar-timeline/-/react-calendar-timeline-0.26.5.tgz#b661a9ebd9051b98b1f675cc35c679db4a71e29a"
-  integrity sha512-9bHH0qPT3u4e02bmMfOt8PhmyER1HvPpf0xF8r6yG/n/UkuCKBMbwDRdSDq2RvrxzajgbFGKCKX3hN+em8nBEQ==
+react-calendar-timeline@^0.26.7:
+  version "0.26.7"
+  resolved "https://registry.yarnpkg.com/react-calendar-timeline/-/react-calendar-timeline-0.26.7.tgz#2cb510c37b163cf8da9f39ba4047e42670cbe739"
+  integrity sha512-50myBM8j/JUopMJCPBm3m+sxQUIG+hAfetAsCeZ7k9dn9EOLIIrM09Qu8JHYG2Urp+HqGyNzq+bOIWCJPgVoEw==
   dependencies:
     classnames "^2.2.6"
     create-react-context "^0.2.2"

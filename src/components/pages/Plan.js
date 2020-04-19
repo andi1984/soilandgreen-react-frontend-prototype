@@ -51,8 +51,8 @@ const PlanPage = ({ history }) => {
         dragging={false}
         groups={groups}
         items={items}
-        visibleTimeStart={moment().startOf("year")}
-        visibleTimeEnd={moment().endOf("year")}
+        visibleTimeStart={moment().startOf("year").unix()*1000}
+        visibleTimeEnd={moment().endOf("year").unix()*1000}
         groupRenderer={({ group }) => {
           return (
             <GroupWrapper>

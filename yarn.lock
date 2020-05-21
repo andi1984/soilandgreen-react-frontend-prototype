@@ -3997,7 +3997,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-context@^0.2.1, create-react-context@^0.2.2:
+create-react-context@^0.2.1:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
   integrity sha512-CQBmD0+QGgTaxDL3OX1IDXYqjkp2It4RIbcb99jS6AEg27Ga+a9G3JtK6SIu0HBwPLZlmwt9F7UwWA4Bn92Rag==
@@ -10070,13 +10070,13 @@ react-app-polyfill@^1.0.4:
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
 
-react-calendar-timeline@^0.26.5:
-  version "0.26.5"
-  resolved "https://registry.yarnpkg.com/react-calendar-timeline/-/react-calendar-timeline-0.26.5.tgz#b661a9ebd9051b98b1f675cc35c679db4a71e29a"
-  integrity sha512-9bHH0qPT3u4e02bmMfOt8PhmyER1HvPpf0xF8r6yG/n/UkuCKBMbwDRdSDq2RvrxzajgbFGKCKX3hN+em8nBEQ==
+react-calendar-timeline@^0.27.0:
+  version "0.27.0"
+  resolved "https://registry.yarnpkg.com/react-calendar-timeline/-/react-calendar-timeline-0.27.0.tgz#25305cd2342db413c53ca4e94805c0df57d940ee"
+  integrity sha512-LOC7yrLT5bkfZAhfUKDhDkxyYd14dMnb3jXJzkpOyciPJyUwYWhxCDhjxwddfXjcB317NJVpszcqpk7xJw0mQg==
   dependencies:
     classnames "^2.2.6"
-    create-react-context "^0.2.2"
+    create-react-context "^0.3.0"
     element-resize-detector "^1.1.12"
     lodash.isequal "^4.5.0"
     memoize-one "^5.1.1"
